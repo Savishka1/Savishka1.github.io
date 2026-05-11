@@ -24,6 +24,13 @@ document.querySelectorAll(
   '.about-text, .skills-grid, .stat, .timeline-item, .project-card, .pub-card, .award-card, .leader-card, .contact-item, .cta-card, .cert-card'
 ).forEach(el => { el.classList.add('fade-in'); observer.observe(el); });
 
+// Scroll to top button
+const scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+  scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+});
+scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
 // Active nav link highlight
 const sections = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a');

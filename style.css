@@ -536,6 +536,22 @@ footer {
 footer p { color: var(--text-muted); font-size: 0.9rem; }
 .footer-sub { margin-top: 0.25rem; font-size: 0.8rem; }
 
+/* ===== SCROLL TO TOP ===== */
+#scrollTop {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border: none; border-radius: 50%; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1rem;
+  box-shadow: 0 4px 20px rgba(0,212,255,0.4);
+  opacity: 0; transform: translateY(12px);
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+#scrollTop.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+#scrollTop:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,212,255,0.5); }
+
 /* ===== FADE IN ANIMATION ===== */
 .fade-in {
   opacity: 0; transform: translateY(24px);
