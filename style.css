@@ -172,6 +172,12 @@ section { padding: 6rem 0; }
 }
 .role-tag i { color: var(--accent); }
 
+.hero-fullname {
+  color: var(--text-muted); font-size: 0.8rem;
+  font-family: 'JetBrains Mono', monospace; letter-spacing: 1px;
+  margin-bottom: 0.75rem; opacity: 0.65;
+}
+
 .hero-bio {
   color: var(--text-muted); font-size: 1.05rem;
   max-width: 480px; margin-bottom: 2rem;
